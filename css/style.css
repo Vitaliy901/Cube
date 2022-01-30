@@ -23,8 +23,12 @@ main > div {
     height:  15rem;
     position: relative;
     overflow: visible;
-    transform: rotateZ(30deg) rotateY(35deg) rotateX(45deg);
-    animation: rotate 6s linear infinite;
+    transform: rotateZ(0deg) rotateY(0deg) rotateX(0deg);
+    animation-name: rotate, go;
+    animation-duration: 30s, 15s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+
 }
 /* ================faces=================== */
 .cube > div {
@@ -66,23 +70,54 @@ main > div {
 
 /* ================animations=================== */
 @keyframes rotate {
-from, to {
-        transform: rotateZ(30deg) rotateY(35deg) rotateX(45deg);
+from{
+        transform: rotateZ(0deg) rotateY(0deg) rotateX(0deg);
     }
-    20% {
+    10% {
         transform: rotateZ(45deg) rotateY(90deg) rotateX(90deg);
     }
-    40% {
+    20% {
         transform: rotateZ(75deg) rotateY(145deg) rotateX(45deg);
     }
-    60% {
+    30% {
         transform: rotateZ(30deg) rotateY(180deg) rotateX(0deg);
     }
-    80% {
+    40% {
         transform: rotateZ(45deg) rotateY(214deg) rotateX(-46deg);
+    }
+    50% {
+        transform: rotateZ(0deg) rotateY(360deg) rotateX(-46deg);
+    }
+    60% {
+        transform: rotateZ(30deg) rotateY(0deg) rotateX(0deg);
+    }
+    80% {
+        transform: rotateZ(30deg) rotateY(360deg) rotateX(360deg);
+    }
+    100% {
+        transform: rotateZ(0deg) rotateY(0deg) rotateX(0deg);
     }
 } 
 
+
+@keyframes go {
+    from, to {
+        flex: 0 1 15rem;
+        height:  15rem;
+    }
+    20% {
+        flex: 0 1 15rem;
+        height:  15rem;
+    }
+    25% {
+        flex: 0 1 10rem;
+        height:  10rem;
+    }
+    35% {
+        flex: 0 1 15rem;
+        height:  15rem;
+    }
+}
 /* ============================================== */
 @media (min-width: 200px) and (max-width: 600px) {
     /* Свойства применяются в пределах от меньшего к большему. */
