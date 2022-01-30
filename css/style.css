@@ -12,16 +12,20 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+   
 }
-.container {
+main > div {
+    transform-style: preserve-3d;
+}
+.cube {
     flex: 0 0 15rem;
     height:  15rem;
     background-color: coral;
     position: relative;
     overflow: visible;
-    perspective: 500px;
+    transform: rotate3d(1, 0, 0, 45deg);
 }
-.cube {
+.cube > div {
     position: absolute;
     top: 0;
     left: 0;
@@ -29,9 +33,29 @@ main {
     bottom: 0;
 }
 
-.one {
-    transform: rotateX(45deg) translate(0rem, -23.3rem) scale(1.4);
-    background-color: rgb(117, 116, 116);
+.top {
+    transform: rotateX(90deg) translateZ(7.5rem);
+    background-color: rgb(233, 79, 79);
+}
+.bottom {
+    transform: rotateX(90deg) translateZ(-7.5rem);
+    background-color: rgb(251, 251, 73);
+}
+.right {
+    transform: rotateY(90deg) translateZ(7.5rem);
+    background-color: rgb(3, 250, 3);
+}
+.left {
+    transform: rotateY(90deg) translateZ(-7.5rem);
+    background-color: rgb(10, 253, 253);
+}
+.back {
+    transform: rotateX(0deg) translateZ(-7.5rem);
+    background-color: rgb(211, 74, 211);
+}
+.front {
+    transform: rotateX(0deg) translateZ(7.5rem);
+    background-color: rgb(69, 69, 255);
 }
 /* ============================================== */
 @media (min-width: 200px) and (max-width: 600px) {
