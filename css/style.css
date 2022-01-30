@@ -17,20 +17,25 @@ main {
 main > div {
     transform-style: preserve-3d;
 }
+/* ================pivot point=================== */
 .cube {
-    flex: 0 0 15rem;
+    flex: 0 1 15rem;
     height:  15rem;
-    background-color: coral;
     position: relative;
     overflow: visible;
-    transform: rotate3d(1, 0, 0, 45deg);
+    transform: rotateZ(30deg) rotateY(35deg) rotateX(45deg);
+    animation: rotate 6s linear infinite;
 }
+/* ================faces=================== */
 .cube > div {
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
+    height: 100%;
+    border: 0.1rem solid black;
+    box-sizing: border-box;
 }
 
 .top {
@@ -57,6 +62,27 @@ main > div {
     transform: rotateX(0deg) translateZ(7.5rem);
     background-color: rgb(69, 69, 255);
 }
+
+
+/* ================animations=================== */
+@keyframes rotate {
+from, to {
+        transform: rotateZ(30deg) rotateY(35deg) rotateX(45deg);
+    }
+    20% {
+        transform: rotateZ(45deg) rotateY(90deg) rotateX(90deg);
+    }
+    40% {
+        transform: rotateZ(75deg) rotateY(145deg) rotateX(45deg);
+    }
+    60% {
+        transform: rotateZ(30deg) rotateY(180deg) rotateX(0deg);
+    }
+    80% {
+        transform: rotateZ(45deg) rotateY(214deg) rotateX(-46deg);
+    }
+} 
+
 /* ============================================== */
 @media (min-width: 200px) and (max-width: 600px) {
     /* Свойства применяются в пределах от меньшего к большему. */
