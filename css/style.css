@@ -44,32 +44,32 @@ main div {
 
 .top {
     transform: rotateX(90deg) translateZ(7.5rem);
-    background-image: url(../img/MetalPlates03_col.jpg);
+    background-color: rgb(224, 226, 71);
     background-size: cover;
 }
 .bottom {
     transform: rotateX(90deg) translateZ(-7.5rem);
-    background-image: url(../img/MetalPlates03_col.jpg);
+    background-color: rgb(40, 175, 58);
     background-size: cover;
 }
 .right {
     transform: rotateY(90deg) translateZ(7.5rem);
-    background-image: url(../img/MetalPlates03_col.jpg);
+    background-color: rgb(63, 189, 189);
     background-size: cover;
 }
 .left {
     transform: rotateY(90deg) translateZ(-7.5rem);
-    background-image: url(../img/MetalPlates03_col.jpg);
+    background-color: rgb(69, 56, 187);
     background-size: cover;
 }
 .back {
     transform: rotateX(0deg) translateZ(-7.5rem);
-    background-image: url(../img/MetalPlates03_col.jpg);
+    background-color: rgb(202, 44, 194);
     background-size: cover;
 }
 .front {
     transform: rotateX(0deg) translateZ(7.5rem);
-    background-image: url(../img/MetalPlates03_col.jpg);
+    background-color: rgb(206, 50, 84);
     background-size: cover;
 }
 
